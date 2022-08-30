@@ -53,6 +53,7 @@ header .logo
 }
 .toggle.active
 {
+  
   background: url(https://i.ibb.co/rt3HybH/close.png);
   background-repeat: no-repeat;
   background-size: 25px;
@@ -151,20 +152,25 @@ header .logo
 {
   letter-spacing: 6px;
 }
+img{
+  max-width: 50px;
+  font-size: 0;
+  height: auto;
+  /* display: inline-block; */
+  margin-block: 0;
+}
 .social
 {
   /* //postion my socials to bottom left */
   position: absolute;
-  scale: 0.09;
   bottom: 0;
   left: 0;
-  margin-top: 100%;
-  margin-left: 40px;
-  width: 0%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
+  padding-left: 30px;
+  /* max-width: 0px; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* z-index: 1; */
 }
 
 .social li
@@ -174,7 +180,7 @@ header .logo
 .social li a
 {
   display: inline-block;
-  margin-left: 40px;
+  /* margin-left: 40px; */
   filter: invert(1);
   transform: scale(0.5);
   transition: 0.5s;
