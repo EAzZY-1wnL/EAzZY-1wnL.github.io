@@ -1,2 +1,4 @@
 # EAzZY-1wnL.github.io
-personal 
+making my own personal portfolio 
+changing trying occasionally 
+learning on the go.
