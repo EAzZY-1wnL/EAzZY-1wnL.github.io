@@ -21,6 +21,9 @@
     <div class="text">
       <h2>👋 I am Madhur</h2> 
     </div>
+    <div class="auto">
+      <h3><span class="auto-type"></span></h3>
+    </div>
     <ul class="social">
       <li><a href="https://twitter.com/XEAzZYX"><img src="twitter.png"></a></li>
       <li><a href="https://www.instagram.com/eazzy_kkl/"><img src="instagram.png"></a></li>
@@ -46,9 +49,25 @@ menuToggle.addEventListener('click', () => {
   showcase.classList.toggle('active');
 })
 </script>
-<section id="home">
-</section>
-<section id="about"><h1>about</h1></section>
-<section id="contact"><h1>contact</h1></section>
+<div class="container">
+  <section id="home">
+    
+  </section>
+  <section id="about">
+    <h1>About</h1>
+  </section>
+  <section id="contact">
+    <h1>Contact</h1>
+  </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typed=new Typed(".auto",{
+    strings:["","Code.","Game.","Eat.","Sleep."],
+    typeSpeed:150,
+    backSpeed:150,
+    loop:true
+  });
+</script>
 </body>
 </html>
