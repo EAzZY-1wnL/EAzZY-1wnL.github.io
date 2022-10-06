@@ -13,7 +13,7 @@
   <!-- https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
   <section class="showcase">
     <header>
-      <h2 class="logo"><a href="#home"></a>EAzZY/Madhur</h2>
+      <h2 class="logo"><a href="#home"></a>M<sup>2</sup></h2>
       <div class="toggle"></div>
     </header>
     <video src="pexels-rostislav-uzunov-7513671.mp4" muted loop autoplay></video>
@@ -24,7 +24,7 @@
     <div class="auto">
       <h3><span class="auto-type"></span></h3>
     </div>
-    <ul class="social">
+    <ul class="social" id="first">
       <li><a href="https://twitter.com/XEAzZYX"><img src="twitter.png"></a></li>
       <li><a href="https://www.instagram.com/eazzy_kkl/"><img src="instagram.png"></a></li>
       <li><a href="https://www.linkedin.com/in/madhur-mittal09/"><img src="linkedin.png"></a></li>
@@ -54,16 +54,31 @@ menuToggle.addEventListener('click', () => {
     
   </section>
   <section id="about">
-    <h1>About</h1>
+    <h1>About me</h1>
+    <p>
+      📝UnderGrad at VIT Vellore pursuing B.Tech in Computer Science Engineering.<br>👀 I’m interested in contributing to open source and learning about new tech.
+      <br>🌱I’m currently learning on the go whatever seems to be appropriate.
+    </p>
   </section>
   <section id="contact">
     <h1>Contact</h1>
+    
+    <!-- <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illo aliquid dolorum? Excepturi illum vel ullam molestiae blanditiis nostrum alias voluptatem nemo voluptate veritatis officia sunt adipisci, fugit aspernatur suscipit!
+    </p> -->
+    <ul class="social" id="second">
+      <li><a href="https://twitter.com/XEAzZYX"><img src="twitter.png"></a></li>
+      <li><a href="https://www.instagram.com/eazzy_kkl/"><img src="instagram.png"></a></li>
+      <li><a href="https://www.linkedin.com/in/madhur-mittal09/"><img src="linkedin.png"></a></li>
+      <li><a href="https://steamcommunity.com/id/EAzZYatGO"><img src="steam.png"></a></li>
+      <li><a href="https://github.com/EAzZY-1wnL"><img src="github.png"></a></li>
+    </ul>
   </section>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   var typed=new Typed(".auto",{
-    strings:["","Code.","Game.","Eat.","Sleep."],
+    strings:["","Code.","Game.","Eat.","Sleep.","Repeat."],
     typeSpeed:150,
     backSpeed:150,
     loop:true
