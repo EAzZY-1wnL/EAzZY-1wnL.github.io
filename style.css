@@ -47,7 +47,7 @@ header .logo
 .toggle
 {
   /* position: relative; */
-  position: sticky;
+  position: relative;
   /* right: 50px; */
   /* right:-95%; */
   width: 60px;
@@ -354,4 +354,8 @@ section{
   font-size: 0;
   /* height: auto; */
   margin-block: 0;
+}
+sup{
+  font-weight: 500;
+  font-size: 30px;
 }
