@@ -38,8 +38,8 @@ header
 }
 header .logo
 {
-  /* position: fixed; */
-  font-size: 30px;
+  position: sticky;
+  font-size: 50px;
   color: #fff;
   text-transform:none;
   cursor: pointer;
@@ -47,7 +47,7 @@ header .logo
 .toggle
 {
   /* position: relative; */
-  position: relative;
+  position: sticky;
   /* right: 50px; */
   /* right:-95%; */
   width: 60px;
@@ -177,27 +177,32 @@ header .logo
 span{
   color: transparent;
 }
-img{
-  max-width: 50px;
+#first img{
+  max-width: 60px;
   font-size: 0;
   height: auto;
   /* display: inline-block; */
   margin-block: 0;
 }
-.social
-{
+
   /* //postion my socials to bottom left */
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  padding-left: 30px; */
+  /* max-width: 0px; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* z-index: 1; */
+
+#first{
   position: absolute;
   bottom: 0;
   left: 0;
   display: flex;
   padding-left: 30px;
-  /* max-width: 0px; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* z-index: 1; */
 }
-
 .social li
 {
   list-style: none;
@@ -288,18 +293,65 @@ section{
 } 
 #about
 {
-  display: flex;
-  justify-content: center;
+  display: inline;
+  /* justify-content: center; */
   font-size:xx-large;
   /* align-items: center; */
   background-color: black;
   scroll-snap-align: start;
 }
-#contact{
+#about h1{
   display: flex;
   justify-content: center;
-  font-size:xx-large;
-  /* align-items: center; */
+  /* margin-left: 30px; */
+  margin-bottom: 10%;
+}
+#about p{
+  top: 50%;
+  left: 0%;
+  transform: translate(0 , 0);
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+#contact{
+  display: inline;
+  /* justify-content: center; */
   background-color: black;
   scroll-snap-align: start;
+}
+#contact h1{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: xxx-large;
+  /* margin-left: 30px; */
+  /* margin-bottom: 10%; */
+}
+/* #contact p{
+  top: 50%;
+  left: 0%;
+  font-size: xx-large;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+} */
+#second{
+  /* height: 100vh; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* top: 25%; */
+  /* align-items: center; */
+  justify-content: center;
+  /* bottom: 0; */
+  /* top: 100%; */
+  /* align-items: center; */
+
+}
+#second img{
+  max-width: 80px;
+  font-size: 0;
+  /* height: auto; */
+  margin-block: 0;
 }
