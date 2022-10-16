@@ -25,11 +25,11 @@
       <h3><span class="auto-type"></span></h3>
     </div>
     <ul class="social" id="first">
-      <li><a href="https://twitter.com/XEAzZYX"><img src="twitter.png"></a></li>
-      <li><a href="https://www.instagram.com/eazzy_kkl/"><img src="instagram.png"></a></li>
-      <li><a href="https://www.linkedin.com/in/madhur-mittal09/"><img src="linkedin.png"></a></li>
-      <li><a href="https://steamcommunity.com/id/EAzZYatGO"><img src="steam.png"></a></li>
-      <li><a href="https://github.com/EAzZY-1wnL"><img src="github.png"></a></li>
+      <li><a href="https://twitter.com/XEAzZYX" target="_blank" rel="noopener noreferrer"><img src="twitter.png"></a></li>
+      <li><a href="https://www.instagram.com/eazzy_kkl/" target="_blank" rel="noopener noreferrer"><img src="instagram.png"></a></li>
+      <li><a href="https://www.linkedin.com/in/madhur-mittal09/" target="_blank" rel="noopener noreferrer"><img src="linkedin.png"></a></li>
+      <li><a href="https://steamcommunity.com/id/EAzZYatGO" target="_blank" rel="noopener noreferrer"><img src="steam.png"></a></li>
+      <li><a href="https://github.com/EAzZY-1wnL" target="_blank" rel="noopener noreferrer"><img src="github.png"></a></li>
     </ul>
   </section>
   
@@ -53,31 +53,30 @@ menuToggle.addEventListener('click', () => {
   <section id="home">
     
   </section>
-  <section id="about">
-    <h1>About me</h1>
-    <p>
+  <section id="about" >
+    <h1 class="hidden">About me</h1>
+    <p class="hidden">
       📝UnderGrad at VIT Vellore pursuing B.Tech in Computer Science Engineering.<br>👀 I’m interested in contributing to open source and learning about new tech.
       <br>🌱I’m currently learning on the go whatever seems to be appropriate.
     </p>
   </section>
   <section id="contact">
     <!-- <div class="container1"> -->
-      <h1>Get in touch</h1>
-      
-    <form>
+      <h1 class="hidden">Get in touch</h1>
+    <form class="hidden">
       <!-- <h3>Get in touch</h3> -->
       <input type="text" id="name" placeholder="Your Name" required>
       <input type="email" id="email" placeholder="email id" required>
       <input type="text" id="phone" placeholder="phone no." required>
       <textarea id="message" rows="4" placeholder="anything?"></textarea>
-      <button type="submit">Send</button>
+      <button class="hidden" type="submit">Send</button>
     </form>
-      <ul class="social" id="second">
-        <li><a href="https://twitter.com/XEAzZYX"><img src="twitter.png"></a></li>
-        <li><a href="https://www.instagram.com/eazzy_kkl/"><img src="instagram.png"></a></li>
-        <li><a href="https://www.linkedin.com/in/madhur-mittal09/"><img src="linkedin.png"></a></li>
-        <li><a href="https://steamcommunity.com/id/EAzZYatGO"><img src="steam.png"></a></li>
-        <li><a href="https://github.com/EAzZY-1wnL"><img src="github.png"></a></li>
+      <ul class="social hidden" id="second">
+        <li><a href="https://twitter.com/XEAzZYX" target="_blank" rel="noopener noreferrer"><img src="twitter.png"></a></li>
+        <li><a href="https://www.instagram.com/eazzy_kkl/" target="_blank" rel="noopener noreferrer"><img src="instagram.png"></a></li>
+        <li><a href="https://www.linkedin.com/in/madhur-mittal09/" target="_blank" rel="noopener noreferrer"><img src="linkedin.png"></a></li>
+        <li><a href="https://steamcommunity.com/id/EAzZYatGO" target="_blank" rel="noopener noreferrer"><img src="steam.png"></a></li>
+        <li><a href="https://github.com/EAzZY-1wnL" target="_blank" rel="noopener noreferrer"><img src="github.png"></a></li>
       </ul>
     <!-- </div> -->
   </section>
@@ -90,7 +89,22 @@ menuToggle.addEventListener('click', () => {
     backSpeed:150,
     loop:true
   });
+
+  const observer = new IntersectionObserver ( (entries) =>{
+    entries.forEach ( (entry) => {
+    console.log (entry)
+    if (entry. isIntersecting) {
+      entry.target. classList. add ('show');
+    }
+    else {
+    entry.target.classList. remove ('show');
+    }
+  });
+});
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
 </script>
 </body>
 </html>
+
 
