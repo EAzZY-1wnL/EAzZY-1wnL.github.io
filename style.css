@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  color: #fff;
+  color: rgb(255, 255, 255);
   /* scroll-snap-type: proximity;
   overflow-y: scroll; */
 }
@@ -268,6 +268,11 @@ html{
     font-size: 2em;
   }
 }
+@media(prefers-reduced-motion) {
+  .hidden{
+    transition: none;
+  }
+}
 /* section.showcase{
   width: 100%;
   height: 100vh;
@@ -284,15 +289,17 @@ html{
 section{
   width: 100%;
   float: left;
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
 }
 #home{
+  /* height: 100vh; */
   background-color: white;
   scroll-snap-align: start;
 } 
 #about
 {
+  /* height: 100vh; */
   display: inline;
   /* justify-content: center; */
   font-size:xx-large;
@@ -317,15 +324,15 @@ section{
 #contact{
   /* display: inline; */
   /* width: 100%; */
-  height: 100%; 
-  background: rgb(0, 0, 0);
+  /* height: 100vh; */
+  /* background: rgb(0, 0, 0); */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* justify-content: center; */
   background-color: black;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 #contact h1{    
   justify-content: center;
@@ -355,7 +362,7 @@ section{
 
 }
 #second img{
-  max-width: 70px;
+  max-width: 60px;
   font-size: 0;
   /* height: auto; */
   margin-block: 0;
@@ -377,7 +384,7 @@ form{
   background: rgb(1, 1, 1);
   display: flex;
   flex-direction: column;
-  padding: 2vw 4vw;
+  padding: 1vw 2vw;
   width: 90%;
   max-width: 600px;
   border-radius: 10px;
@@ -390,8 +397,8 @@ form h3{
 }
 form input, form textarea{
   position: relative;
-  border: 5px;
-  border-color: #03a9f4;
+  border: 2px solid rgb(77, 77, 77);
+  border-radius: 4px;
   margin: 10px 0;
   padding: 20px;
   outline: none;
@@ -412,3 +419,14 @@ form button{
   border-radius: 30px;
 }
 /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
