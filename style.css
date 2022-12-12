@@ -43,6 +43,12 @@ header .logo
   color: #fff;
   text-transform:none;
   cursor: pointer;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(90deg, #9FA4C4 0%, #B3CDD1 50%,#9FA4C4 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite;
 }
 .toggle
 {
@@ -57,6 +63,13 @@ header .logo
   background-size: 30px;
   background-position: center;
   cursor: pointer;
+  /* background-color: #8BC6EC;
+  background-image: linear-gradient(90deg, #9FA4C4 0%, #B3CDD1 50%, #9FA4C4 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite; */
+
 }
 .toggle.active
 {
@@ -124,6 +137,16 @@ header .logo
   color: #fff;
   line-height: 1em;
   text-transform: none;
+  /* background: linear-gradient(135deg,#5335cf 0%,#de0e5e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite; */
+}
+@keyframes animate {
+  100%{
+    background-position: 400%;
+  }
 }
 .text h3
 {
@@ -308,10 +331,17 @@ section{
   scroll-snap-align: start;
 }
 #about h1{
+  padding: 1em;
+  font-size: 1.5em;
   display: flex;
   justify-content: center;
   /* margin-left: 30px; */
   margin-bottom: 10%;
+  background: linear-gradient(135deg, #5335cf 0%, #de0e5e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite;
 }
 #about p{
   top: 50%;
@@ -335,8 +365,14 @@ section{
   /* scroll-snap-align: start; */
 }
 #contact h1{    
+  font-size: 3em;
   justify-content: center;
   font-size: xxx-large;
+  background: linear-gradient(135deg, #5335cf 0%, #de0e5e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite;
   /* margin-left: 30px; */
   /* margin-bottom: 10%; */
 }
@@ -384,7 +420,7 @@ form{
   background: rgb(1, 1, 1);
   display: flex;
   flex-direction: column;
-  padding: 1vw 2vw;
+  padding: 3vw 5vw;
   width: 90%;
   max-width: 600px;
   border-radius: 10px;
