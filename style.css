@@ -200,6 +200,23 @@ header .logo
 span{
   color: transparent;
 }
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: relative;
+  left: 50%;
+  top: 25%;
+  transform: translate(0%, -50%);
+  user-select: none;
+  /* -- Prevent image highlighting -- */
+}
+
+#image-track>.image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
 #first img{
   max-width: 60px;
   font-size: 0;
@@ -350,6 +367,26 @@ section{
   align-items: center;
   margin-left: 15%;
   margin-right: 10%;
+}
+#gallery{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  margin: 0rem;
+  overflow: hidden;
+}
+#gallery h1 {
+  padding: 1em;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  /* margin-left: 30px; */
+  margin-bottom: 10%;
+  background: linear-gradient(135deg, #5335cf 0%, #de0e5e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite;
 }
 #contact{
   /* display: inline; */
