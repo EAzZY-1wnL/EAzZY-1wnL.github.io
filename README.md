@@ -3,6 +3,6 @@ making my own personal portfolio <br/>
 changing trying occasionally <br/>
 learning on the go.<br/>
 current tasks -> 
-1> add moving color grad 
+
 2> form connection 
-3> maybe working photo collage 
+5237aad6-17d8-41fe-9cf2-a5da908e20c4
