@@ -57,8 +57,9 @@ menuToggle.addEventListener('click', () => {
   <section id="about" >
     <h1 class="hidden">About me</h1>
     <p class="hidden">
-      📝UnderGrad at VIT Vellore pursuing B.Tech in Computer Science Engineering.<br>👀 I’m interested in contributing to open source and learning about new tech.
-      <br>🌱I’m currently learning on the go whatever seems to be appropriate.
+      💼 Software Engineer @ UBS.<br><br> 👀 I’m interested in contributing to open source and learning about new tech.
+      <br><br> 🌱 I’m currently learning Full stack development.
+
     </p>
   </section>
   <section id="gallery">
@@ -99,13 +100,12 @@ menuToggle.addEventListener('click', () => {
   <section id="contact">
     <!-- <div class="container1"> -->
       <h1 class="hidden">Get in touch</h1>
-    <form class="hidden" onsubmit="sendEmail();reset();return false;">
-      <!-- <h3>Get in touch</h3> -->
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="email id" required>
-      <input type="text" id="phone" placeholder="phone no." required>
-      <textarea id="message" rows="4" placeholder="anything?"></textarea>
-      <button class="hidden" type="submit">Send</button>
+    <form id="form" class="hidden">
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <input type="text" name="email" id="email" placeholder="email id" required>
+        <!-- <input type="text" name="message" id="message" placeholder="anything?" required> -->
+        <textarea name="message" id="message" placeholder="any message....." required></textarea>
+        <input type="submit" id="button" value="Send Email">
     </form>
       <ul class="social hidden" id="second">
         <li><a href="https://twitter.com/XEAzZYX" target="_blank" rel="noopener noreferrer"><img src="twitter.png"></a></li>
@@ -117,6 +117,30 @@ menuToggle.addEventListener('click', () => {
     <!-- </div> -->
   </section>
 </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript"> emailjs.init('C4zO_l4hqJAE08T19') </script>
+<script>
+  const btn = document.getElementById('button');
+
+  document.getElementById('form')
+    .addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      btn.value = 'Sending...';
+
+      const serviceID = 'default_service';
+      const templateID = 'template_nzf0rb9';
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Send Email';
+          alert('Sent!');
+        }, (err) => {
+          btn.value = 'Send Email';
+          alert(JSON.stringify(err));
+        });
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   var typed=new Typed(".auto",{
@@ -140,7 +164,7 @@ menuToggle.addEventListener('click', () => {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 </script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+<!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
   function sendEmail() {
     Email.send({
@@ -159,7 +183,25 @@ menuToggle.addEventListener('click', () => {
       message => alert("Message Sent Succesfully")
     );
   }
-</script>
+</script> -->
+<!-- <script>
+  const btn = document.getElementById('button');
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    btn.value = 'Sending...';
+    emailjs.sendForm('service_sbxp206', 'template_nzf0rb9', this)
+      .then(function (response) {
+        console.log('Email sent!', response.status, response.text);
+        alert('Email sent successfully!');
+        btn.value = 'Send Email';
+
+      }, function (error) {
+        console.error('Error sending email:', error);
+        alert('Oops! Something went wrong.');
+        btn.value = 'Send Email';
+      });
+  });
+</script> -->
 <script>
   const track = document.getElementById("image-track");
 
