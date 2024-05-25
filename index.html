@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <title>mylandingpage!</title>
 </head>
-<!-- <script src="js.js"></script> -->
     <body>
- <!-- Video Source -->
-  <!-- https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
+      <div id="third">
+      <div id="loader" class="loader"></div>
+      </div>
+      <div id="portfolio-content">
   <section class="showcase">
     <header>
       <h2 class="logo"><a href="#home"></a>M<sup>2</sup></h2>
       <div class="toggle"></div>
     </header>
     <video src="pexels-rostislav-uzunov-7513671.mp4" muted loop autoplay></video>
-    <div class="overlay"></div>
+    
     <div class="text">
       <h2>👋 I am Madhur</h2> 
     </div>
@@ -164,44 +165,18 @@ menuToggle.addEventListener('click', () => {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 </script>
-<!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-  function sendEmail() {
-    Email.send({
-      
-      Host: "smtp.elasticemail.com",
-      Username: "ezthegawd@gmail.com",
-      Password:"",
-      To: "madhur09112001@gmail.com",
-      From: "ezthegawd@gmail.com",
-      Subject: "New Contact Form Enquiry",
-      Body: "Name: " + document.getElementById("name").value
-        + "<br> Email: " + document.getElementById("email").value 
-        + "<br> Pnone no: " + document.getElementById("phone").value
-        +"<br> Message: " + document.getElementById("message").value
-    }).then(
-      message => alert("Message Sent Succesfully")
-    );
-  }
-</script> -->
-<!-- <script>
-  const btn = document.getElementById('button');
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    btn.value = 'Sending...';
-    emailjs.sendForm('service_sbxp206', 'template_nzf0rb9', this)
-      .then(function (response) {
-        console.log('Email sent!', response.status, response.text);
-        alert('Email sent successfully!');
-        btn.value = 'Send Email';
-
-      }, function (error) {
-        console.error('Error sending email:', error);
-        alert('Oops! Something went wrong.');
-        btn.value = 'Send Email';
-      });
-  });
-</script> -->
+  document.addEventListener("DOMContentLoaded", function () {
+    // Simulate loading time (remove this in real implementation)
+  window.onload = function () {
+      // Hide the loader
+      document.getElementById("loader").style.display = "none";
+      // Show the portfolio content
+      document.getElementById("portfolio-content").style.display = "block";
+      console.log("loading complete");
+  };
+});
+</script>
 <script>
   const track = document.getElementById("image-track");
 
@@ -249,6 +224,7 @@ menuToggle.addEventListener('click', () => {
 
     window.ontouchmove = e => handleOnMove(e.touches[0]);
 </script>
+</div>
 </body>
 </html>
 

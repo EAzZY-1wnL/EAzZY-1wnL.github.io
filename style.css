@@ -514,3 +514,82 @@ form input, form textarea{
   filter: blur(0);
   transform: translateX(0);
 }
+/* HTML: <div class="loader"></div> */
+#third{
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.loader {
+  --R: 30px;
+  --g1: #514b82 96%, #0000;
+  --g2: #f8ebeb 96%, #0000;
+  width: calc(2*var(--R));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  -webkit-mask: linear-gradient(#000 0 0);
+  animation: l30 2s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  width: 50%;
+  background:
+    radial-gradient(farthest-side, var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g2)) calc(var(--R) + 0.5*var(--R) - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1)) 0 calc(-1*var(--R)),
+    radial-gradient(farthest-side, var(--g2)) calc(var(--R) - 0.5*var(--R) - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R) - var(--R)),
+    radial-gradient(farthest-side, var(--g2)) calc(-1*var(--R)) 0,
+    radial-gradient(farthest-side, var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) + 0.5*var(--R) - var(--R));
+  background-size: calc(2*var(--R)) calc(2*var(--R));
+  background-repeat: no-repeat;
+}
+
+.loader::after {
+  transform: rotate(180deg);
+  transform-origin: right;
+}
+
+@keyframes l30 {
+  100% {
+    transform: rotate(-1turn)
+  }
+}
+/* Loader styles */
+/* #loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.loader-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+/* Hide the loader when content is loaded */
+#portfolio-content {
+  display: none;
+}
