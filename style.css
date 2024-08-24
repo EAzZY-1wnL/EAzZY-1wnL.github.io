@@ -336,6 +336,7 @@ section{
   /* height: 100vh; */
   background-color: white;
   scroll-snap-align: start;
+  
 } 
 #about
 {
@@ -381,7 +382,7 @@ section{
   display: flex;
   justify-content: center;
   /* margin-left: 30px; */
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   background: linear-gradient(135deg, #5335cf 0%, #de0e5e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
   background-size: 400%;
   -webkit-background-clip: text;
@@ -390,10 +391,9 @@ section{
 }
 #contact{
   /* display: inline; */
-  /* width: 100%; */
-  /* height: 100vh; */
-  /* background: rgb(0, 0, 0); */
-  display: flex;
+  min-height: 20vh;/* width: 100%; */
+    /* background: rgb(0, 0, 0); */
+  display:block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -402,16 +402,29 @@ section{
   /* scroll-snap-align: start; */
 }
 #contact h1{    
-  font-size: 3em;
+    /* height: 400px; */
+    /* padding: 1em; */
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 30px; */
+    margin-bottom: 2%;
+    background: linear-gradient(135deg, #5335cf 0%, #de0e5e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+}
+.newest{
+  display: flex;
   justify-content: center;
-  font-size: xxx-large;
-  background: linear-gradient(135deg, #5335cf 0%, #de0e5e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
-  background-size: 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate 10s linear infinite;
-  /* margin-left: 30px; */
-  /* margin-bottom: 10%; */
+}
+.newest h2{
+  font-size: 2em;
+}
+.newest a{
+  font-size: 2em;
+  color: blue;
 }
 /* #contact p{
   top: 50%;
@@ -422,7 +435,8 @@ section{
   margin-right: 5%;
 } */
 #second{
-  /* height: 100vh; */
+  
+  /* height: 0px; */
   position: relative;
   display: flex;
   flex-direction: row;
@@ -435,7 +449,7 @@ section{
 
 }
 #second img{
-  max-width: 60px;
+  max-width: 100px;
   font-size: 0;
   /* height: auto; */
   margin-block: 0;
@@ -534,6 +548,15 @@ form input, form textarea{
   position: relative;
   overflow: hidden;
   animation: l10-0 2s infinite cubic-bezier(1, 175, .5, 175);
+}
+
+#getintouch{
+  height: 500px;
+}
+
+.newest{
+  display: flex;
+  color: #222a87;
 }
 
 .loader::before {
@@ -636,4 +659,33 @@ form input, form textarea{
 /* Hide the loader when content is loaded */
 #portfolio-content {
   display: none;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos{
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+}
+
+.logos-slide{
+  display: inline-block;
+  animation: 24s slide infinite linear;
+}
+
+.logos-slide img{
+  height: 500px;
+  margin: 0 40px;
+}
+
+.logos:hover .logos-slide{
+  animation-play-state: paused;
 }
